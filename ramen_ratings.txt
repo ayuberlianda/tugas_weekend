@@ -1,0 +1,26 @@
+USE tugas_weekend;
+
+CREATE TABLE `ramen_ratings` (
+  `Review#` int(11) NOT NULL,
+  `Brand` varchar(100) DEFAULT NULL,
+  `Variety` varchar(100) DEFAULT NULL,
+  `Style` varchar(10) NOT NULL,
+  `Country` varchar(50) DEFAULT NULL,
+  `star` float DEFAULT NULL,
+  `Top_ten` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`Review#`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+
+SELECT * FROM ramen_ratings
+
+SELECT * FROM ramen_ratings WHERE Star >= 4;
+
+SELECT * FROM ramen_ratings WHERE Country = 'Japan';
+
+SELECT `Review#`, 
+Brand, 
+UPPER(Variety), 
+Style, Country, 
+Star, 
+Top_ten FROM ramen_ratings;
